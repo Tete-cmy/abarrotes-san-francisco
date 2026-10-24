@@ -1,0 +1,15 @@
+export type Pantalla =
+  | "dashboard"
+  | "ventas"
+  | "creditos"
+  | "clientes"
+  | "productos"
+  | "inventario"
+  | "compras"
+  | "configuracion"
+  | "facturas"
+  | "devoluciones"
+  | "bitacora"
+  | "corte"
+  | "reportes"
+  | "usuarios";

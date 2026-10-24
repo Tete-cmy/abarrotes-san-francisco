@@ -1,0 +1,285 @@
+.bitacora-page {
+  min-height: 100vh;
+  background: #eef2f5;
+  color: #1f2937;
+}
+
+.bitacora-main {
+  width: min(1480px, 100%);
+  margin: 0 auto;
+  padding: 30px 32px 42px;
+}
+
+.bitacora-header p,
+.bitacora-panel-header p {
+  margin: 0 0 6px;
+  color: #c96d06;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.bitacora-header h1,
+.bitacora-panel-header h2 {
+  margin: 0;
+  color: #202b23;
+}
+
+.bitacora-header span {
+  display: block;
+  margin-top: 7px;
+  color: #7a867d;
+  font-size: 13px;
+}
+
+.bitacora-resumen {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.bitacora-resumen article {
+  min-height: 115px;
+  padding: 20px;
+  border: 1px solid #dfe6e1;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 7px 18px rgba(33, 52, 40, 0.05);
+}
+
+.bitacora-resumen span {
+  color: #78837b;
+  font-size: 11px;
+}
+
+.bitacora-resumen strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 26px;
+}
+
+.bitacora-panel {
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 7px 20px rgba(33, 52, 40, 0.06);
+}
+
+.bitacora-panel-header {
+  padding: 17px 20px;
+  border-bottom: 1px solid #e5ebe7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bitacora-panel-header span {
+  color: #89948c;
+  font-size: 12px;
+}
+
+.bitacora-filtros {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5ebe7;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 180px 220px 170px;
+  gap: 10px;
+}
+
+.bitacora-filtros input,
+.bitacora-filtros select {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: white;
+  outline: none;
+}
+
+.bitacora-filtros input:focus,
+.bitacora-filtros select:focus {
+  border-color: #e99119;
+  box-shadow: 0 0 0 4px rgba(233, 145, 25, 0.12);
+}
+
+.bitacora-tabla-contenedor {
+  overflow-x: auto;
+}
+
+.bitacora-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bitacora-tabla th {
+  padding: 13px 15px;
+  background: #fff7ed;
+  color: #9a3412;
+  text-align: left;
+  font-size: 11px;
+}
+
+.bitacora-tabla td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.bitacora-tabla td span {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.bitacora-modulo {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #b45309 !important;
+  font-weight: 800;
+}
+
+.bitacora-detalle-corto {
+  max-width: 330px;
+}
+
+.bitacora-tabla button {
+  padding: 8px 11px;
+  border: none;
+  border-radius: 8px;
+  background: #e99119;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.bitacora-vacio {
+  padding: 50px !important;
+  color: #6b7280;
+  text-align: center;
+}
+
+.bitacora-error {
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  display: flex;
+  gap: 9px;
+}
+
+.bitacora-error p {
+  margin: 0;
+}
+
+.bitacora-modal-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  padding: 20px;
+  background: rgba(15, 23, 18, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bitacora-modal {
+  width: min(620px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+}
+
+.bitacora-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bitacora-modal-header span {
+  color: #d97706;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.bitacora-modal-header h2 {
+  margin: 5px 0 0;
+}
+
+.bitacora-modal-header button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.bitacora-modal dl {
+  margin: 20px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.bitacora-modal dl div {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.bitacora-modal dt {
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bitacora-modal dd {
+  margin: 5px 0 0;
+  color: #1f2937;
+  font-size: 13px;
+}
+
+.bitacora-dispositivo {
+  overflow-wrap: anywhere;
+  font-size: 10px !important;
+}
+
+.bitacora-cerrar {
+  width: 100%;
+  min-height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #e99119;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .bitacora-filtros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .bitacora-main {
+    padding: 20px 15px 30px;
+  }
+
+  .bitacora-resumen,
+  .bitacora-filtros {
+    grid-template-columns: 1fr;
+  }
+}

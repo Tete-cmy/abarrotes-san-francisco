@@ -1,0 +1,441 @@
+.reportes-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f6f4;
+  color: #1f2937;
+}
+
+.reportes-header {
+  min-height: 82px;
+  padding: 14px 30px;
+  background: white;
+  border-bottom: 1px solid #dfe6e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reportes-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.reportes-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #159c49, #40d173);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 10px 22px rgba(21, 156, 73, 0.2);
+}
+
+.reportes-brand h1 {
+  margin: 0;
+  color: #1c2820;
+  font-size: 25px;
+}
+
+.reportes-brand p {
+  margin: 4px 0 0;
+  color: #8b968e;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reportes-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reportes-header-actions button {
+  min-height: 43px;
+  padding: 0 17px;
+  border: 1px solid #bde9cb;
+  border-radius: 11px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.reportes-header-actions .volver-dashboard {
+  background: white;
+  border-color: #dfe6e1;
+  color: #536058;
+}
+
+.reportes-nav {
+  min-height: 58px;
+  padding: 8px 30px;
+  background: #f9fbfa;
+  border-bottom: 1px solid #dfe6e1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reportes-nav button {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #dce3de;
+  border-radius: 10px;
+  background: white;
+  color: #536058;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reportes-nav .reportes-activo {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #15803d;
+}
+
+.reportes-main {
+  padding: 25px 30px 34px;
+}
+
+.reportes-titulo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.reportes-titulo p,
+.reportes-panel-header p {
+  margin: 0 0 6px;
+  color: #159349;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.reportes-titulo h2 {
+  margin: 0;
+  color: #202b23;
+  font-size: 31px;
+}
+
+.reportes-titulo span {
+  display: block;
+  margin-top: 7px;
+  color: #7a867d;
+  font-size: 13px;
+}
+
+.reportes-titulo select {
+  min-width: 210px;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d7dfd9;
+  border-radius: 11px;
+  background: white;
+  outline: none;
+  font-weight: 700;
+}
+
+.reportes-resumen {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(175px, 1fr));
+  gap: 15px;
+  margin-bottom: 19px;
+}
+
+.reportes-resumen article {
+  min-height: 124px;
+  padding: 18px;
+  border: 1px solid #dfe6e1;
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 7px 18px rgba(33, 52, 40, 0.04);
+}
+
+.reporte-icono {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.reporte-icono.verde {
+  background: #dcfce7;
+}
+
+.reporte-icono.azul {
+  background: #e1effe;
+}
+
+.reporte-icono.naranja {
+  background: #fff0d8;
+}
+
+.reporte-icono.morado {
+  background: #f1e8ff;
+}
+
+.reporte-icono.rojo {
+  background: #fee2e2;
+}
+
+.reportes-resumen span {
+  color: #78837b;
+  font-size: 11px;
+}
+
+.reportes-resumen strong {
+  display: block;
+  margin-top: 5px;
+  color: #1c2820;
+  font-size: 22px;
+}
+
+.reportes-resumen p {
+  margin: 5px 0 0;
+  color: #9aa39d;
+  font-size: 9px;
+}
+
+.reportes-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(300px, 0.7fr);
+  gap: 18px;
+}
+
+.ventas-reporte-panel,
+.productos-vendidos-panel {
+  overflow: hidden;
+  border: 1px solid #dfe6e1;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 7px 18px rgba(33, 52, 40, 0.04);
+}
+
+.productos-vendidos-panel {
+  padding-bottom: 18px;
+}
+
+.reportes-panel-header {
+  min-height: 73px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5ebe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reportes-panel-header h3 {
+  margin: 0;
+  color: #222d25;
+  font-size: 20px;
+}
+
+.reportes-panel-header > span {
+  color: #89948c;
+  font-size: 12px;
+}
+
+.reportes-tabla-contenedor {
+  overflow-x: auto;
+}
+
+.reportes-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reportes-tabla th {
+  padding: 14px 16px;
+  background: #f3f7f4;
+  color: #68736b;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.reportes-tabla td {
+  padding: 16px;
+  border-top: 1px solid #edf1ee;
+  color: #4c5850;
+  font-size: 12px;
+}
+
+.total-reporte {
+  color: #15803d !important;
+  font-weight: 900;
+}
+
+.estado-venta {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.reportes-vacio {
+  height: 300px;
+  text-align: center;
+}
+
+.reportes-vacio div {
+  margin-bottom: 12px;
+  font-size: 39px;
+}
+
+.reportes-vacio p {
+  margin: 7px 0 0;
+  color: #9aa39d;
+  font-size: 11px;
+}
+
+.producto-destacado {
+  margin: 17px;
+  padding: 17px;
+  border: 1px solid #bde9cb;
+  border-radius: 13px;
+  background: #f0fdf4;
+}
+
+.producto-destacado span {
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.producto-destacado strong {
+  display: block;
+  margin-top: 7px;
+  color: #253229;
+  font-size: 18px;
+}
+
+.producto-destacado p {
+  margin: 5px 0 0;
+  color: #748078;
+  font-size: 11px;
+}
+
+.ranking-productos {
+  padding: 0 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ranking-productos article {
+  min-height: 61px;
+  padding: 11px;
+  border: 1px solid #e4eae6;
+  border-radius: 11px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.posicion-ranking {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #edf9f1;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.ranking-productos strong {
+  display: block;
+  color: #344138;
+  font-size: 12px;
+}
+
+.ranking-productos span {
+  display: block;
+  margin-top: 3px;
+  color: #909a93;
+  font-size: 9px;
+}
+
+.ranking-productos b {
+  color: #15803d;
+  font-size: 12px;
+}
+
+.productos-vendidos-vacio {
+  min-height: 260px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productos-vendidos-vacio div {
+  margin-bottom: 11px;
+  font-size: 36px;
+}
+
+.productos-vendidos-vacio p {
+  color: #9aa39d;
+  font-size: 11px;
+}
+
+@media (max-width: 1150px) {
+  .reportes-resumen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reportes-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .reportes-header {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .reportes-nav {
+    padding: 8px 18px;
+    overflow-x: auto;
+  }
+
+  .reportes-main {
+    padding: 21px 16px 30px;
+  }
+
+  .reportes-titulo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reportes-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .reportes-tabla {
+    min-width: 850px;
+  }
+}

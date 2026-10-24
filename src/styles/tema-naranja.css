@@ -1,0 +1,344 @@
+:root {
+  --sf-primary: #e98b14;
+  --sf-primary-dark: #c96d06;
+  --sf-primary-soft: #fff2df;
+  --sf-primary-border: #f0c27a;
+  --sf-primary-text: #7a4305;
+}
+
+/* =========================================================
+   TEMA PRINCIPAL NARANJA — ABARROTES SAN FRANCISCO
+   Este archivo debe importarse AL FINAL para sobrescribir
+   los estilos verdes antiguos sin borrar la lógica existente.
+   ========================================================= */
+
+/* ---------- PRODUCTOS ---------- */
+
+.agregar-producto,
+.boton-guardar {
+  background: var(--sf-primary) !important;
+  color: #171717 !important;
+}
+
+.agregar-producto:hover,
+.boton-guardar:hover {
+  background: var(--sf-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+.volver-dashboard {
+  color: var(--sf-primary-dark) !important;
+}
+
+.productos-tools input:focus,
+.productos-tools select:focus,
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: var(--sf-primary) !important;
+  outline-color: rgba(233, 139, 20, 0.16) !important;
+  box-shadow: 0 0 0 4px rgba(233, 139, 20, 0.12) !important;
+}
+
+.tabla-productos th {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.boton-accion {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-text) !important;
+  border: 1px solid var(--sf-primary-border) !important;
+}
+
+.boton-accion:hover {
+  background: #ffe3b8 !important;
+}
+
+/* ---------- VENTAS ---------- */
+
+.ventas-logo,
+.ticket-negocio-logo {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-dark) !important;
+  box-shadow: none !important;
+}
+
+.venta-titulo-barra {
+  background: linear-gradient(
+    135deg,
+    var(--sf-primary-dark),
+    var(--sf-primary)
+  ) !important;
+}
+
+.busqueda-pos-fila input:focus,
+.campo-efectivo input:focus {
+  border-color: var(--sf-primary) !important;
+  box-shadow: 0 0 0 4px rgba(233, 139, 20, 0.12) !important;
+}
+
+.busqueda-pos-fila button,
+.acciones-pos .accion-cobrar,
+.total-pos button,
+.confirmar-cobro,
+.imprimir-ticket,
+.reimprimir-ticket {
+  background: var(--sf-primary) !important;
+  border-color: var(--sf-primary-dark) !important;
+  color: #171717 !important;
+}
+
+.busqueda-pos-fila button:hover,
+.acciones-pos .accion-cobrar:hover,
+.total-pos button:hover,
+.imprimir-ticket:hover,
+.reimprimir-ticket:hover {
+  background: var(--sf-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+.ventas-menu-superior .menu-seleccionado,
+.resultado-producto:hover,
+.cantidad-ticket button,
+.total-pos,
+.cobro-resumen,
+.cambio-resumen.correcto,
+.ticket-cambio,
+.detalle-cambio {
+  background: var(--sf-primary-soft) !important;
+}
+
+.ventas-menu-superior .menu-seleccionado,
+.ventas-menu-superior button:hover {
+  border-color: var(--sf-primary-border) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.importe-ticket,
+.total-pos span,
+.total-pos strong,
+.cobro-resumen strong,
+.cambio-resumen.correcto,
+.ticket-totales > div:first-child strong,
+.ticket-cambio span,
+.ticket-cambio strong,
+.detalle-ticket-header span,
+.detalle-ticket-header > strong,
+.detalle-cambio span,
+.detalle-cambio strong,
+.historial-header span {
+  color: var(--sf-primary-dark) !important;
+}
+
+.total-pos {
+  border-left-color: var(--sf-primary-border) !important;
+}
+
+/* ---------- INVENTARIO ---------- */
+
+.inventario-logo,
+.entrada-producto-icono {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-dark) !important;
+  box-shadow: none !important;
+}
+
+.inventario-titulo p,
+.inventario-panel-header p,
+.movimientos-header p,
+.entrada-modal-header span {
+  color: var(--sf-primary-dark) !important;
+}
+
+.inventario-nav .inventario-activo,
+.inventario-nav button:hover,
+.boton-entrada,
+.confirmar-entrada,
+.inventario-header-actions button {
+  background: var(--sf-primary-soft) !important;
+  border-color: var(--sf-primary-border) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.confirmar-entrada {
+  background: var(--sf-primary) !important;
+  color: #171717 !important;
+}
+
+.confirmar-entrada:hover {
+  background: var(--sf-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+.inventario-herramientas input:focus,
+.inventario-herramientas select:focus,
+.movimientos-herramientas input:focus,
+.movimientos-herramientas select:focus,
+.entrada-cantidad input:focus {
+  border-color: var(--sf-primary) !important;
+  box-shadow: 0 0 0 4px rgba(233, 139, 20, 0.11) !important;
+}
+
+.cantidad-inventario {
+  color: var(--sf-primary-dark) !important;
+}
+
+/* Estados semánticos:
+   suficiente/entrada siguen verdes porque indican éxito.
+   bajo sigue naranja y agotado sigue rojo. */
+
+/* ---------- REPORTES ---------- */
+
+.reportes-logo {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-dark) !important;
+  box-shadow: none !important;
+}
+
+.reportes-titulo p,
+.reportes-panel-header p {
+  color: var(--sf-primary-dark) !important;
+}
+
+.reportes-nav .reportes-activo,
+.reportes-header-actions button {
+  background: var(--sf-primary-soft) !important;
+  border-color: var(--sf-primary-border) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.reportes-nav button:hover {
+  border-color: var(--sf-primary-border) !important;
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.total-reporte,
+.producto-destacado span,
+.ranking-productos b {
+  color: var(--sf-primary-dark) !important;
+}
+
+.producto-destacado {
+  border-color: var(--sf-primary-border) !important;
+  background: var(--sf-primary-soft) !important;
+}
+
+.posicion-ranking {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-dark) !important;
+}
+
+/* Estado "Completada" permanece verde por significado */
+
+/* ---------- USUARIOS ---------- */
+
+.usuarios-logo,
+.usuario-logo,
+.usuario-icono,
+.usuario-resumen-icono {
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-dark) !important;
+  box-shadow: none !important;
+}
+
+.usuarios-titulo p,
+.usuarios-panel-header p,
+.usuario-titulo p,
+.usuario-panel-header p {
+  color: var(--sf-primary-dark) !important;
+}
+
+.usuarios-nav .usuarios-activo,
+.usuario-nav .usuario-activo,
+.nuevo-usuario,
+.agregar-usuario,
+.boton-nuevo-usuario {
+  background: var(--sf-primary) !important;
+  border-color: var(--sf-primary-dark) !important;
+  color: #171717 !important;
+}
+
+.usuarios-nav button:hover,
+.usuario-nav button:hover {
+  border-color: var(--sf-primary-border) !important;
+  background: var(--sf-primary-soft) !important;
+  color: var(--sf-primary-text) !important;
+}
+
+.nuevo-usuario:hover,
+.agregar-usuario:hover,
+.boton-nuevo-usuario:hover {
+  background: var(--sf-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+/* ---------- ELEMENTOS COMPARTIDOS ---------- */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(233, 139, 20, 0.28) !important;
+  outline-offset: 2px;
+}
+/* =====================================================
+   EFECTO GLOBAL PARA TODOS LOS BOTONES
+===================================================== */
+
+button {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+  filter: brightness(1.02);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.13);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+button[class*="principal"]:not(:disabled):hover,
+button[class*="guardar"]:not(:disabled):hover,
+button[class*="nuevo"]:not(:disabled):hover,
+button[class*="agregar"]:not(:disabled):hover {
+  box-shadow: 0 10px 22px rgba(234, 138, 11, 0.3);
+}
+button[class*="eliminar"]:not(:disabled):hover,
+button[class*="peligro"]:not(:disabled):hover,
+button[class*="cancelar-factura"]:not(:disabled):hover {
+  box-shadow: 0 9px 20px rgba(220, 38, 38, 0.25);
+}
+.sistema-menu button:not(:disabled):hover {
+  transform: translateY(-2px);
+  border-color: #f59e0b;
+  background: linear-gradient(
+    180deg,
+    #383838 0%,
+    #292929 100%
+  );
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.sistema-menu button.sistema-menu-activo:hover {
+  background: linear-gradient(
+    180deg,
+    #f6a726 0%,
+    #e98b14 100%
+  );
+  box-shadow: 0 9px 20px rgba(233, 139, 20, 0.35);
+}

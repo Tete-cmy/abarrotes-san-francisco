@@ -1,0 +1,673 @@
+:root {
+  --facturas-naranja: #e98b14;
+  --facturas-naranja-oscuro: #c96d06;
+  --facturas-naranja-suave: #fff2df;
+  --facturas-borde: #dfe4e7;
+  --facturas-texto: #26313b;
+}
+
+.facturas-page {
+  min-height: calc(100vh - 170px);
+  background: #f3f5f6;
+  color: var(--facturas-texto);
+}
+
+.facturas-main {
+  padding: 28px 30px 36px;
+}
+
+.facturas-titulo {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.facturas-titulo p,
+.facturas-panel-header p {
+  margin: 0 0 6px;
+  color: var(--facturas-naranja-oscuro);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.facturas-titulo h1 {
+  margin: 0;
+  font-size: 31px;
+}
+
+.facturas-titulo span {
+  display: block;
+  margin-top: 7px;
+  color: #73808b;
+  font-size: 13px;
+}
+
+.facturas-boton-principal,
+.facturas-boton-guardar,
+.facturas-boton-peligro,
+.facturas-boton-cancelar {
+  min-height: 47px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.facturas-boton-principal,
+.facturas-boton-guardar {
+  border: 1px solid var(--facturas-naranja-oscuro);
+  background: var(--facturas-naranja);
+  color: #171717;
+}
+
+.facturas-boton-principal:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.facturas-boton-cancelar {
+  border: 1px solid #d7dde2;
+  background: white;
+  color: #56616b;
+}
+
+.facturas-boton-peligro {
+  border: none;
+  background: #dc2626;
+  color: white;
+}
+
+.facturas-aviso {
+  margin-bottom: 16px;
+  padding: 13px 15px;
+  border: 1px solid #f0cf98;
+  border-radius: 11px;
+  background: #fff8ec;
+  color: #7b4a00;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.facturas-aviso p,
+.facturas-error p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.facturas-resumen {
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(165px, 1fr));
+  gap: 14px;
+}
+
+.facturas-resumen article {
+  min-height: 116px;
+  padding: 17px;
+  border: 1px solid var(--facturas-borde);
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.facturas-resumen-icono {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.facturas-resumen-icono.naranja {
+  background: #fff0d8;
+}
+
+.facturas-resumen-icono.verde {
+  background: #dcfce7;
+}
+
+.facturas-resumen-icono.rojo {
+  background: #fee2e2;
+}
+
+.facturas-resumen-icono.morado {
+  background: #f1e8ff;
+}
+
+.facturas-resumen-icono.azul {
+  background: #e1effe;
+}
+
+.facturas-resumen span {
+  color: #78837b;
+  font-size: 10px;
+}
+
+.facturas-resumen strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 21px;
+}
+
+.facturas-resumen p {
+  margin: 5px 0 0;
+  color: #9aa39d;
+  font-size: 9px;
+}
+
+.facturas-error {
+  margin-bottom: 15px;
+  padding: 13px 15px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #efc0bb;
+  border-radius: 11px;
+  background: #fff5f4;
+  color: #a93028;
+}
+
+.facturas-panel {
+  overflow: hidden;
+  border: 1px solid var(--facturas-borde);
+  border-radius: 16px;
+  background: white;
+}
+
+.facturas-panel-header {
+  min-height: 73px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e8ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facturas-panel-header h2 {
+  margin: 0;
+}
+
+.facturas-panel-header > span {
+  color: #89948c;
+  font-size: 12px;
+}
+
+.facturas-filtros {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e8ecef;
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 12px;
+}
+
+.facturas-filtros input,
+.facturas-filtros select {
+  min-height: 45px;
+  padding: 0 13px;
+  border: 1px solid #d7dde2;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.facturas-tabla-contenedor {
+  overflow-x: auto;
+}
+
+.facturas-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.facturas-tabla th {
+  padding: 14px 16px;
+  background: #f3f6f8;
+  color: #68736b;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.facturas-tabla td {
+  padding: 15px 16px;
+  border-top: 1px solid #edf1ee;
+  font-size: 12px;
+}
+
+.facturas-tabla td span {
+  display: block;
+  margin-top: 4px;
+  color: #8a949c;
+  font-size: 9px;
+}
+
+.factura-total {
+  color: var(--facturas-naranja-oscuro);
+  font-weight: 900;
+}
+
+.factura-estado {
+  display: inline-block !important;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 10px !important;
+  font-weight: 900;
+}
+
+.factura-estado.emitida {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.factura-estado.cancelada {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.facturas-acciones {
+  display: flex;
+  gap: 7px;
+}
+
+.facturas-acciones button {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid #d7dde2;
+  border-radius: 8px;
+  background: white;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.facturas-acciones .factura-cancelar {
+  border-color: #fecaca;
+  background: #fff5f4;
+  color: #b91c1c;
+}
+
+.facturas-vacio {
+  height: 250px;
+  text-align: center;
+}
+
+.facturas-vacio div {
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.facturas-vacio p {
+  margin: 7px 0 0;
+  color: #9aa39d;
+}
+
+.facturas-modal-fondo,
+.facturas-exito-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 2200;
+  padding: 20px;
+  background: rgba(15, 23, 18, 0.6);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+}
+
+.facturas-modal {
+  width: min(760px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 26px;
+  border-radius: 20px;
+  background: white;
+}
+
+.facturas-modal-pequeno {
+  width: min(520px, 100%);
+}
+
+.facturas-modal-header {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.facturas-modal-header span {
+  color: var(--facturas-naranja-oscuro);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.facturas-modal-header h2 {
+  margin: 5px 0 0;
+}
+
+.facturas-modal-header > button {
+  width: 39px;
+  height: 39px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.facturas-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.facturas-form-grid label,
+.facturas-modal form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.facturas-form-grid input,
+.facturas-form-grid select,
+.facturas-modal textarea {
+  width: 100%;
+  border: 1px solid #d7dde2;
+  border-radius: 10px;
+  background: white;
+  font: inherit;
+  outline: none;
+}
+
+.facturas-form-grid input,
+.facturas-form-grid select {
+  min-height: 45px;
+  padding: 0 12px;
+}
+
+.facturas-modal textarea {
+  padding: 12px;
+  resize: vertical;
+}
+
+.facturas-completo {
+  grid-column: 1 / -1;
+}
+
+.facturas-venta-preview {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff8ec;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.facturas-venta-preview span {
+  display: block;
+  color: #7b858d;
+  font-size: 9px;
+}
+
+.facturas-venta-preview strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.facturas-modal-acciones {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 10px;
+}
+
+.factura-documento {
+  width: min(900px, 100%);
+}
+
+.factura-documento-encabezado {
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--facturas-naranja);
+  display: grid;
+  grid-template-columns: 75px 1fr auto;
+  gap: 15px;
+  align-items: center;
+}
+
+.factura-documento-encabezado img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.factura-documento-encabezado h2,
+.factura-documento-encabezado p {
+  margin: 0;
+}
+
+.factura-documento-encabezado p {
+  margin-top: 5px;
+  color: #7b858d;
+  font-size: 11px;
+}
+
+.factura-documento-encabezado > div:last-child {
+  text-align: right;
+}
+
+.factura-documento-encabezado > div:last-child span {
+  display: block;
+  margin-top: 5px;
+  color: #7b858d;
+  font-size: 10px;
+}
+
+.factura-documento-datos {
+  margin: 18px 0;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f7f9fa;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.factura-documento-datos span,
+.factura-documento-datos p {
+  color: #7b858d;
+  font-size: 10px;
+}
+
+.factura-documento-datos strong {
+  display: block;
+  margin: 5px 0;
+}
+
+.factura-documento-datos p {
+  margin: 3px 0 0;
+}
+
+.factura-documento-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.factura-documento-tabla th {
+  padding: 12px;
+  background: #f3f6f8;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.factura-documento-tabla td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e8ecef;
+  font-size: 11px;
+}
+
+.factura-documento-totales {
+  width: min(360px, 100%);
+  margin: 18px 0 0 auto;
+}
+
+.factura-documento-totales > div {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.factura-documento-total {
+  margin-top: 5px;
+  padding: 13px !important;
+  border-radius: 10px;
+  background: var(--facturas-naranja-suave);
+  color: var(--facturas-naranja-oscuro);
+  font-size: 18px;
+}
+
+.factura-documento-cancelada {
+  margin-top: 18px;
+  padding: 17px;
+  border: 2px solid #dc2626;
+  border-radius: 11px;
+  color: #b91c1c;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.factura-documento-cancelada span {
+  display: block;
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.factura-documento-pie {
+  margin-top: 25px;
+  color: #8a949c;
+  text-align: center;
+  font-size: 10px;
+}
+
+.facturas-exito {
+  width: min(410px, 100%);
+  padding: 28px;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+}
+
+.facturas-exito > div {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  background: var(--facturas-naranja);
+  border: 6px solid var(--facturas-naranja-suave);
+  display: grid;
+  place-items: center;
+  font-size: 37px;
+  font-weight: 900;
+}
+
+.facturas-exito h2 {
+  margin: 0;
+}
+
+.facturas-exito p {
+  margin: 9px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .factura-documento,
+  .factura-documento * {
+    visibility: visible !important;
+  }
+
+  .facturas-modal-fondo {
+    position: static;
+    display: block;
+    padding: 0;
+    background: white;
+  }
+
+  .factura-documento {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    padding: 25px;
+    border-radius: 0;
+  }
+
+  .no-imprimir {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  .facturas-resumen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .facturas-main {
+    padding: 20px 16px 30px;
+  }
+
+  .facturas-titulo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .facturas-boton-principal {
+    width: 100%;
+  }
+
+  .facturas-resumen,
+  .facturas-form-grid,
+  .facturas-venta-preview,
+  .factura-documento-datos {
+    grid-template-columns: 1fr;
+  }
+
+  .facturas-completo {
+    grid-column: auto;
+  }
+
+  .facturas-filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .facturas-tabla {
+    min-width: 1150px;
+  }
+
+  .factura-documento-encabezado {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .factura-documento-encabezado > div:last-child {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}

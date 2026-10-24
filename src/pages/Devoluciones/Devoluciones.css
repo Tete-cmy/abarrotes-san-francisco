@@ -1,0 +1,472 @@
+.devoluciones-page {
+  min-height: 100vh;
+  background: #eef2f5;
+  color: #1f2937;
+}
+
+.devoluciones-main {
+  padding: 28px 30px 36px;
+}
+
+.devoluciones-titulo {
+  margin-bottom: 20px;
+}
+
+.devoluciones-titulo p,
+.devoluciones-panel-header p {
+  margin: 0 0 6px;
+  color: #c96d06;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.devoluciones-titulo h1,
+.devoluciones-panel-header h2 {
+  margin: 0;
+  color: #202b23;
+}
+
+.devoluciones-titulo span {
+  display: block;
+  margin-top: 7px;
+  color: #7a867d;
+  font-size: 13px;
+}
+
+.devoluciones-resumen {
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.devoluciones-resumen article {
+  padding: 18px;
+  border: 1px solid #dfe6e1;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 7px 18px rgba(33, 52, 40, 0.05);
+}
+
+.devoluciones-resumen article > div {
+  font-size: 24px;
+}
+
+.devoluciones-resumen span {
+  display: block;
+  margin-top: 8px;
+  color: #78837b;
+  font-size: 11px;
+}
+
+.devoluciones-resumen strong {
+  display: block;
+  margin-top: 5px;
+  color: #1c2820;
+  font-size: 25px;
+}
+
+.devoluciones-resumen p {
+  margin: 5px 0 0;
+  color: #9aa39d;
+  font-size: 9px;
+}
+
+.devoluciones-panel {
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 7px 20px rgba(33, 52, 40, 0.06);
+}
+
+.devoluciones-panel-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5ebe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.devoluciones-panel-header span {
+  color: #89948c;
+  font-size: 12px;
+}
+
+.devoluciones-herramientas {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5ebe7;
+}
+
+.devoluciones-herramientas input {
+  width: 100%;
+  min-height: 45px;
+  padding: 0 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+.devoluciones-herramientas input:focus {
+  border-color: #e99119;
+  box-shadow: 0 0 0 4px rgba(233, 145, 25, 0.12);
+}
+
+.devoluciones-tabla-contenedor {
+  overflow-x: auto;
+}
+
+.devoluciones-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.devoluciones-tabla th {
+  padding: 13px;
+  background: #fff7ed;
+  color: #9a3412;
+  text-align: left;
+  font-size: 11px;
+}
+
+.devoluciones-tabla td {
+  padding: 14px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.devoluciones-tabla td span {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.devoluciones-tabla button {
+  padding: 8px 11px;
+  border: none;
+  border-radius: 8px;
+  background: #e99119;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.devolucion-total {
+  color: #b45309;
+  font-weight: 900;
+}
+
+.devoluciones-vacio {
+  padding: 50px !important;
+  color: #6b7280;
+  text-align: center;
+}
+
+.devoluciones-error {
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  display: flex;
+  gap: 9px;
+}
+
+.devoluciones-error p {
+  margin: 0;
+}
+
+.devolucion-detalle-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  padding: 20px;
+  background: rgba(15, 23, 18, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devolucion-detalle-modal {
+  width: min(520px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+}
+
+.devolucion-detalle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.devolucion-detalle-header span {
+  color: #d97706;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.devolucion-detalle-header h2 {
+  margin: 5px 0 0;
+}
+
+.devolucion-detalle-header button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.devolucion-detalle-datos {
+  margin-top: 18px;
+  padding: 14px 0;
+  border-top: 2px dashed #d1d5db;
+  border-bottom: 2px dashed #d1d5db;
+}
+
+.devolucion-detalle-datos p {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.devolucion-detalle-productos {
+  padding: 15px 0;
+  border-bottom: 2px dashed #d1d5db;
+}
+
+.devolucion-detalle-productos article {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.devolucion-detalle-productos span {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.devolucion-detalle-total {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.devolucion-detalle-total strong {
+  color: #b45309;
+  font-size: 24px;
+}
+
+.devolucion-detalle-acciones {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 10px;
+}
+
+.devolucion-detalle-acciones button {
+  min-height: 47px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.devolucion-detalle-acciones .imprimir {
+  border: none;
+  background: #d97706;
+  color: white;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .devolucion-detalle-modal,
+  .devolucion-detalle-modal * {
+    visibility: visible;
+  }
+
+  .devolucion-detalle-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80mm;
+    max-height: none;
+    padding: 4mm;
+    border-radius: 0;
+  }
+
+  .devolucion-detalle-acciones {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .devoluciones-main {
+    padding: 20px 16px 30px;
+  }
+
+  .devoluciones-resumen {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Comprobante profesional de devolución */
+.devolucion-detalle-modal.comprobante-58mm {
+  width: min(340px, 100%);
+}
+
+.devolucion-detalle-modal.comprobante-80mm {
+  width: min(500px, 100%);
+}
+
+.devolucion-comprobante-marca {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 2px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.devolucion-comprobante-marca img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.devolucion-comprobante-marca strong {
+  display: block;
+  color: #1f2937;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.devolucion-comprobante-marca span {
+  display: block;
+  margin-top: 5px;
+  color: #d97706;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.devolucion-comprobante-mensaje {
+  padding: 15px 0 5px;
+  text-align: center;
+}
+
+.devolucion-comprobante-mensaje strong {
+  display: block;
+  color: #1f2937;
+  font-size: 13px;
+}
+
+.devolucion-comprobante-mensaje p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.selector-comprobante {
+  margin: 16px 0 12px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.selector-comprobante > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.selector-comprobante > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.selector-comprobante button {
+  min-height: 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #4b5563;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.selector-comprobante button.activo {
+  border-color: #d97706;
+  background: #fff7ed;
+  color: #b45309;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .devolucion-detalle-modal.comprobante-58mm {
+    width: 58mm !important;
+    padding: 3mm !important;
+  }
+
+  .devolucion-detalle-modal.comprobante-80mm {
+    width: 80mm !important;
+    padding: 4mm !important;
+  }
+
+  .devolucion-detalle-modal {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black !important;
+  }
+
+  .devolucion-detalle-modal *,
+  .devolucion-detalle-modal p,
+  .devolucion-detalle-modal span,
+  .devolucion-detalle-modal strong {
+    color: black !important;
+  }
+
+  .selector-comprobante,
+  .devolucion-detalle-acciones,
+  .devolucion-detalle-header > button {
+    display: none !important;
+  }
+
+  .devolucion-comprobante-marca img {
+    width: 17mm;
+    height: 17mm;
+  }
+}
